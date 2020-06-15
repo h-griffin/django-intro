@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>
+        {% block title %}
+        snickers
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}"> Home </a></li>
+                <li><a href="{% url 'about' %}"> About </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <p>IS THIS BLUE?</p>
+    <main>
+        <h1 style='color:green;'> IS THIS RED YET?? </h1>
+
+        {% block content %}
+
+        <h1>inside block content</h1>
+
+        {% endblock content %}
+    </main>
+
+
+    <footer>base footer</footer>
+</body>
+</html>
+
